@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/256/6556/6556791.png" type="png">
+  <title>VerifyLine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav id="mainNav">
+      <a href="#" class="logo" id="homeLink"><div class="logo-icon">✓</div>VerifyLine</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" id="navHome">Home</a></li>
+        <li><a href="#features" id="navFeatures">Features</a></li>
+        <li><a href="#faq" id="navFaq">FAQ</a></li>
+        <li><a href="#footer" id="navAbout">About</a></li>
+          <li id="navAuthMobile" class="nav-auth-mobile"></li>
+
+      </ul>
+      <div class="right">
+        <button class="theme" id="themeBtn"><i class="fas fa-moon"></i></button>
+        <button class="cta-nav" id="openAuthBtn">Get Started</button>
+        <button class="menu" id="menuBtn"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"><img src="https://kyc-chain.com/wp-content/uploads/2026/01/id-data-verification-1024x559.jpeg" alt="ID verification" loading="lazy"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="badge">Next-gen verification</span>
+      <h1>Secure <span>Identity</span> Verification, <span>Simplified</span></h1>
+      <p>VerifyLine provides enterprise-grade ID verification with real-time data validation, fraud detection, and seamless API integration.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" id="heroAuthBtn">Get Started →</button>
+        <button class="btn-secondary">Explore →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features-section" id="features">
+    <div class="features-header">
+      <span class="section-badge">✦ Features</span>
+      <h2>Why Choose <span>VerifyLine</span></h2>
+      <p>Powerful tools to validate, track, and secure your verification workflow</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h3>Phone <span class="highlight">Validation</span></h3>
+        <p>Instantly validate phone numbers and check whether they follow a valid international format.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
+        <h3>Carrier &amp; Region <span class="highlight">Lookup</span></h3>
+        <p>Identify the phone number's country, region, and mobile carrier using mock prefix-based data.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>API Usage <span class="highlight">Tracking</span></h3>
+        <p>Monitor API requests, track remaining usage, and prevent requests after reaching the assigned limit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="faq">
+    <div class="faq-header">
+      <span class="section-badge">FAQ</span>
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <p>Everything you need to know about VerifyLine</p>
+    </div>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question">What is this platform used for? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">This platform is a Phone Validation API that allows users to validate phone numbers and retrieve basic information such as country, carrier (mock data), and region. It is designed for testing and educational purposes.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How does phone number validation work? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">The system checks the phone number format and uses prefix-based logic (e.g., +92 for Pakistan) to determine the country and mock carrier information. If the prefix is not recognized, the number is marked as invalid or partially supported.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is an API key and why is it needed? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">An API key is a unique identifier generated for each user after registration. It is used to authenticate requests and track usage against the assigned request limit.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What happens when I exceed my request limit? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">If a user reaches the maximum allowed number of API requests, further requests will be blocked until the limit is reset or increased by the system admin.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo"><div class="logo-icon">✓</div>VerifyLine</a>
+          <p>Enterprise-grade identity verification with real-time data validation, fraud detection, and seamless API integration.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul><li><a href="#features">Features</a></li><li><a href="#">Pricing</a></li><li><a href="#">API</a></li><li><a href="#">Docs</a></li></ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul><li><a href="#home">Home</a></li><li><a href="#footer">About</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Contact</a></li></ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">Security</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VerifyLine. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== AUTH MODAL ===== -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="auth-close" id="closeAuthBtn"><i class="fas fa-times"></i></button>
+      <div class="logo-small"><div class="logo-icon">✓</div>VerifyLine</div>
+      <p class="subtitle">Sign in to your account or create a new one</p>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Login</button>
+        <button class="auth-tab" data-tab="register">Register</button>
+      </div>
+      <form class="auth-form" id="loginForm">
+        <div class="form-group"><label for="loginEmail">Email Address</label><input type="email" id="loginEmail" placeholder="you@example.com" required></div>
+        <div class="form-group"><label for="loginPassword">Password</label><input type="password" id="loginPassword" placeholder="••••••••" required></div>
+        <div class="form-options">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="auth-submit">Sign In →</button>
+        <p class="auth-switch">Don't have an account? <span id="switchToRegister">Create one</span></p>
+      </form>
+      <form class="auth-form hidden" id="registerForm">
+        <div class="form-group"><label for="regName">Full Name</label><input type="text" id="regName" placeholder="John Doe" required></div>
+        <div class="form-group"><label for="regEmail">Email Address</label><input type="email" id="regEmail" placeholder="you@example.com" required></div>
+        <div class="form-group"><label for="regPassword">Password</label><input type="password" id="regPassword" placeholder="••••••••" required></div>
+        <div class="form-group"><label for="regConfirm">Confirm Password</label><input type="password" id="regConfirm" placeholder="••••••••" required></div>
+        <div class="form-options"><label><input type="checkbox" required> I agree to the <a href="#">Terms of Service</a></label></div>
+        <button type="submit" class="auth-submit">Create Account →</button>
+        <p class="auth-switch">Already have an account? <span id="switchToLogin">Sign in</span></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== DASHBOARD ===== -->
+  <div class="dashboard-page" id="dashboardPage">
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <a href="#" class="sidebar-logo"><div class="logo-icon">✓</div><span>VerifyLine</span></a>
+      <nav class="sidebar-nav">
+        <span class="nav-label">Main Menu</span>
+        <a href="#" class="active" data-page="dashboard"><i class="fas fa-th-large"></i> <span>Dashboard</span></a>
+        <a href="#" data-page="validator"><i class="fas fa-phone"></i> <span>Phone Validator</span></a>
+        <a href="#" data-page="logs"><i class="fas fa-list-ul"></i> <span>API Logs</span></a>
+        <a href="#" data-page="usage"><i class="fas fa-chart-bar"></i> <span>API Usage</span></a>
+        <a href="#" data-page="profile"><i class="fas fa-user"></i> <span>Profile</span></a>
+        <div class="sidebar-section">
+          <span class="nav-label">Controls</span>
+          <button class="sidebar-action" id="sidebarToggleTheme"><i class="fas fa-adjust"></i> <span>Toggle theme</span></button>
+        </div>
+        <div class="logout-item"><button id="logoutSidebarBtn"><i class="fas fa-sign-out-alt"></i> Logout</button></div>
+      </nav>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="left"><h2 class="page-title" id="pageTitle"><i class="fas fa-th-large"></i> <span>Dashboard</span></h2></div>
+        <div class="right-actions">
+          <div class="user-info">
+            <div class="avatar-sm" id="dashAvatar">U</div>
+            <div class="user-details">
+              <span class="name" id="dashName">User</span>
+              <span class="email" id="dashEmail"></span>
+            </div>
+          </div>
+          <button class="back-btn" id="backToHomeBtn"><i class="fas fa-arrow-left"></i><span>Back</span></button>
+        </div>
+      </header>
+      <div class="dashboard-content" id="dashboardContent">
+        <!-- ===== DASHBOARD PAGE ===== -->
+        <div id="page-dashboard">
+          <section class="dashboard-hero">
+            <div class="hero-copy">
+              <div class="hero-eyebrow"><i class="fas fa-chart-line"></i> Operations overview</div>
+              <h3>Welcome back, <span id="heroName">User</span></h3>
+              <p>Your verification pipeline is healthy, request volume is climbing, and the latest checks are performing better than the previous week.</p>
+              <div class="hero-actions">
+                <button class="hero-btn primary" id="quickValidate">Run validation</button>
+              </div>
+            </div>
+            <div class="hero-panel">
+              <div class="panel-label">Live status</div>
+              <div class="panel-score">99.8%</div>
+              <div class="panel-sub">uptime in the last 24 hours</div>
+              <div class="mini-bars"><span style="height:50%"></span><span style="height:74%"></span><span style="height:62%"></span><span style="height:86%"></span><span style="height:92%"></span></div>
+            </div>
+          </section>
+          <div class="dash-stats">
+            <div class="dash-stat-card"><div class="stat-icon"><i class="fas fa-chart-line"></i></div><div class="stat-number">0</div><div class="stat-label">Total API Requests</div><span class="stat-change up">↑ 0%</span></div>
+            <div class="dash-stat-card"><div class="stat-icon"><i class="fas fa-check-circle"></i></div><div class="stat-number">0</div><div class="stat-label">Successful Validations</div><span class="stat-change up">↑ 0%</span></div>
+            <div class="dash-stat-card"><div class="stat-icon"><i class="fas fa-hourglass-half"></i></div><div class="stat-number">0</div><div class="stat-label">Requests Remaining</div><span class="stat-change down">↓ 0%</span></div>
+            <div class="dash-stat-card"><div class="stat-icon"><i class="fas fa-bolt"></i></div><div class="stat-number">0%</div><div class="stat-label">API Uptime</div><span class="stat-change down">↓ 0%</span></div>
+          </div>
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="card-title"><i class="fas fa-clock"></i> Recent Activity</div>
+              <div class="activity-list">
+                <div class="activity-item"><div class="act-icon blue"><i class="fas fa-info-circle"></i></div><div class="act-info"><div class="act-text">No recent activity</div><div class="act-time">—</div></div><span class="act-status pending">—</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <div class="card-title"><i class="fas fa-bolt"></i> Quick Actions</div>
+              <div class="quick-actions">
+                <button class="quick-action" id="quickValidateSecondary"><i class="fas fa-phone"></i> Validate Phone Number</button>
+                <button class="quick-action" id="quickApiUsage"><i class="fas fa-chart-bar"></i> API Usage</button>
+                <button class="quick-action" id="quickApiLogs"><i class="fas fa-list-ul"></i> API Logs</button>
+              </div>
+              <div class="insight-card"><div class="insight-label">This month</div><div class="insight-value">+0%</div><div class="insight-text">No data available yet.</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PHONE VALIDATOR ===== -->
+        <div id="page-validator" style="display:none;">
+          <div class="validator-wrapper">
+            <div class="validator-header">
+              <div class="logoBox">
+                <div class="logo"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <h1>Phone Validator</h1>
+                  <p>Validate international phone numbers and get carrier & location info</p>
+                </div>
+              </div>
+              <div class="status-badge">
+                <span class="dot"></span>
+                API Online
+              </div>
+            </div>
+            <div class="validator-search">
+              <div class="field">
+                <label>Select Country</label>
+                <div class="selectBox" id="countryBtn">
+                  <div class="left">
+                    <img src="https://flagcdn.com/w40/pk.png" alt="flag">
+                    <span id="countryName">Pakistan</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="validator-dropdown" id="dropdown">
+                  <div class="searchCountry">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="searchCountry" placeholder="Search country...">
+                  </div>
+                  <ul id="countryList"></ul>
+                </div>
+              </div>
+              <div class="field small">
+                <label>Dial Code</label>
+                <input type="text" id="dialCode" value="+92" readonly>
+              </div>
+              <div class="field phone">
+                <label>Phone Number</label>
+                <div class="phoneInput">
+                  <i class="fa-solid fa-phone-volume"></i>
+                  <input id="phone" type="text" placeholder="3001234567">
+                </div>
+                <small>Enter valid mobile number</small>
+              </div>
+              <button class="validateBtn">
+                <i class="fa-solid fa-shield-halved"></i>
+                Validate Number
+              </button>
+            </div>
+            <h2 class="validator-title"><i class="fa-solid fa-chart-column"></i> Validation Result</h2>
+            <div class="validator-cards">
+              <div class="card-item">
+                <div class="icon-box blue"><i class="fa-solid fa-globe"></i></div>
+                <h4>Country</h4>
+                <h3 id="countryResult">—</h3>
+                <span>—</span>
+              </div>
+              <div class="card-item">
+                <div class="icon-box green"><i class="fa-solid fa-tower-cell"></i></div>
+                <h4>Carrier</h4>
+                <h3 id="carrier">—</h3>
+                <span>—</span>
+              </div>
+              <div class="card-item">
+                <div class="icon-box purple"><i class="fa-solid fa-location-dot"></i></div>
+                <h4>Region</h4>
+                <h3 id="region">—</h3>
+                <span>—</span>
+              </div>
+              <div class="card-item">
+                <div class="icon-box green"><i class="fa-solid fa-shield-check"></i></div>
+                <h4>Status</h4>
+                <h3 id="statusText">—</h3>
+                <span>—</span>
+              </div>
+            </div>
+            <div class="validator-details">
+              <h2><i class="fa-solid fa-circle-check"></i> Validation Details</h2>
+              <div class="detailGrid">
+                <div class="detail"><i class="fa-solid fa-circle-check"></i><div><b>Format Valid</b><p>—</p></div></div>
+                <div class="detail"><i class="fa-solid fa-circle-check"></i><div><b>Country Recognized</b><p>—</p></div></div>
+                <div class="detail"><i class="fa-solid fa-circle-check"></i><div><b>Carrier Detected</b><p>—</p></div></div>
+                <div class="detail"><i class="fa-solid fa-circle-check"></i><div><b>API Request Successful</b><p>—</p></div></div>
+              </div>
+            </div>
+            <div class="validator-stats">
+              <div class="stat"><i class="fa-regular fa-clock"></i><div><p>Response Time</p><h3>—</h3></div></div>
+              <div class="stat"><i class="fa-regular fa-calendar"></i><div><p>Last Updated</p><h3>—</h3></div></div>
+              <div class="stat"><i class="fa-solid fa-hashtag"></i><div><p>Request ID</p><h3>—</h3></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== API LOGS ===== -->
+        <div id="page-logs" style="display:none;">
+          <div class="api-logs-container">
+            <div class="page-header">
+              <div><h1>API Logs</h1><p>Monitor every API request made through your account.</p></div>
+              <button class="export-btn" id="exportLogsBtn"><i class="fa-solid fa-download"></i> Export Logs</button>
+            </div>
+            <div class="api-logs-stats-grid">
+              <div class="api-logs-stat-card"><i class="fa-solid fa-server"></i><div><h2 id="logsTotal">0</h2><p>Total Requests</p></div></div>
+              <div class="api-logs-stat-card"><i class="fa-solid fa-circle-check"></i><div><h2 id="logsSuccess">0</h2><p>Successful</p></div></div>
+              <div class="api-logs-stat-card"><i class="fa-solid fa-circle-xmark"></i><div><h2 id="logsFailed">0</h2><p>Failed</p></div></div>
+              <div class="api-logs-stat-card"><i class="fa-solid fa-gauge-high"></i><div><h2 id="logsAvg">—</h2><p>Avg Response</p></div></div>
+            </div>
+            <div class="api-logs-filter-card">
+              <input type="text" id="logsSearch" placeholder="Search phone number or request ID">
+              <select id="logsStatusFilter"><option value="all">All Status</option><option value="success">Success</option><option value="failed">Failed</option></select>
+              <select id="logsDateFilter"><option value="today">Today</option><option value="week">This Week</option><option value="month">This Month</option></select>
+              <button class="api-logs-search-btn" id="logsSearchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </div>
+            <div class="api-logs-table-card">
+              <table>
+                <thead><tr><th>Request ID</th><th>Phone Number</th><th>Country</th><th>Carrier</th><th>Status</th><th>Response</th><th>Date</th></tr></thead>
+                <tbody id="logsTableBody">
+                  <tr><td colspan="7" style="text-align:center;padding:40px;color:#94a3b8;">No logs available</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== API USAGE ===== -->
+        <div id="page-usage" style="display:none;">
+          <div class="api-usage-container">
+            <div class="page-header">
+              <div><h1>API Usage</h1><p>Monitor your API requests, credits and daily activity.</p></div>
+              <div class="date-filter"><i class="fa-regular fa-calendar"></i><select id="dateFilter"><option value="week">This Week</option><option value="month">This Month</option><option value="lastMonth">Last Month</option><option value="last90">Last 90 Days</option></select></div>
+            </div>
+            <div class="api-stats-grid">
+              <div class="api-stat-card"><div class="card-icon purple"><i class="fa-solid fa-layer-group"></i></div><div class="card-content"><h4>Credits Left</h4><h2 id="creditsLeft">0</h2><small>Remaining Credits</small></div></div>
+              <div class="api-stat-card"><div class="card-icon blue"><i class="fa-solid fa-chart-column"></i></div><div class="card-content"><h4>Total Requests</h4><h2 id="requests">0</h2><small>Current Period</small></div></div>
+              <div class="api-stat-card"><div class="card-icon green"><i class="fa-solid fa-circle-check"></i></div><div class="card-content"><h4>Successful</h4><h2 id="success">0</h2><small>Successful Requests</small></div></div>
+              <div class="api-stat-card"><div class="card-icon red"><i class="fa-solid fa-circle-xmark"></i></div><div class="card-content"><h4>Failed</h4><h2 id="failed">0</h2><small>Failed Requests</small></div></div>
+            </div>
+            <div class="api-graph-card">
+              <div class="card-header"><div><h2>Daily API Requests</h2><p>Number of requests made each day.</p></div></div>
+              <canvas id="usageChart"></canvas>
+            </div>
+            <div class="api-progress-card">
+              <div class="progress-head"><div><h2>Credit Usage</h2><p>Monthly credit consumption</p></div><strong id="creditProgressText">0 / 0</strong></div>
+              <div class="progress"><div class="progress-fill-bar" id="creditProgressBar" style="width:0%;"></div></div>
+            </div>
+            <div class="api-history-card">
+              <div class="card-header"><div><h2>Daily Usage History</h2><p>API requests made day by day.</p></div></div>
+              <table>
+                <thead><tr><th>Date</th><th>Requests</th><th>Credits Used</th><th>Success</th><th>Failed</th></tr></thead>
+                <tbody id="historyBody"><tr><td colspan="5" style="text-align:center;padding:30px;color:#94a3b8;">No data available</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PROFILE ===== -->
+        <div id="page-profile" style="display:none;">
+          <div class="profile-container">
+            <div class="page-header"><div><h1>Profile Settings</h1><p>Manage your account information and security</p></div></div>
+            <div class="profile-card">
+              <div class="card-title"><div class="title-left"><div class="icon-box"><i class="fa-regular fa-user"></i></div><div><h2>Profile Information</h2><p>Update your personal details</p></div></div></div>
+              <div class="profile-area">
+                <div class="profile-image"><img src="https://i.pravatar.cc/180" id="preview" alt="Profile"><label class="camera"><i class="fa-solid fa-camera"></i><input type="file" id="upload" hidden></label></div>
+                <div class="profile-form"><label>Username</label><div class="input-box"><i class="fa-regular fa-user"></i><input type="text" id="profileUsername" placeholder="Enter username"></div><small>Your public username.</small></div>
+                <button class="btn-gradient" id="changeUsernameBtn"><i class="fa-solid fa-pen"></i> Change Username</button>
+              </div>
+            </div>
+            <div class="profile-card">
+              <div class="card-title"><div class="title-left"><div class="icon-box"><i class="fa-solid fa-lock"></i></div><div><h2>Change Password</h2><p>Keep your account secure</p></div></div></div>
+              <div class="password-grid">
+                <div><label>Current Password</label><div class="input-box"><i class="fa-solid fa-lock"></i><input type="password" id="currentPass" placeholder="Current password"><i class="fa-regular fa-eye toggle"></i></div></div>
+                <div><label>New Password</label><div class="input-box"><i class="fa-solid fa-lock"></i><input type="password" id="newPass" placeholder="New password"><i class="fa-regular fa-eye toggle"></i></div></div>
+                <div><label>Confirm Password</label><div class="input-box"><i class="fa-solid fa-lock"></i><input type="password" id="confirmPass" placeholder="Confirm password"><i class="fa-regular fa-eye toggle"></i></div></div>
+              </div>
+              <div class="password-info"><i class="fa-solid fa-shield-halved"></i><div><strong>Password Requirements</strong><p>Minimum 8 characters • One uppercase • One number • One special character</p></div></div>
+              <div class="button-area"><button class="btn-gradient" id="updatePasswordBtn"><i class="fa-solid fa-key"></i> Update Password</button></div>
+            </div>
+            <div class="profile-card danger-card">
+              <div class="card-title"><div class="title-left"><div class="danger-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div><h2>Delete Account</h2><p>Permanently remove your account.</p></div></div></div>
+              <div class="danger-box"><h4>Deleting your account will permanently remove:</h4><ul><li>All API Keys</li><li>Validation History</li><li>Saved Settings</li><li>Usage Statistics</li><li>Your Account Information</li></ul><p class="warning">This action cannot be undone.</p></div>
+              <div class="button-area"><button class="delete-btn" id="deleteAccountBtn"><i class="fa-solid fa-trash"></i> Delete Account</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
