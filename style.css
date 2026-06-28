@@ -4053,3 +4053,13 @@ body.dark .sidebar-toggle-btn {
     color: #e2e8f0 !important;
   }
 }
+/* style.css mein add karo */
+#navAuthMobile {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  #navAuthMobile {
+    display: block;
+  }
+}
