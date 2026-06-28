@@ -4063,3 +4063,102 @@ body.dark .sidebar-toggle-btn {
     display: block;
   }
 }
+/* ===== GLOBAL SMOOTHNESS ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a, button, input, select, textarea, .card, .faq-item,
+.dash-stat-card, .api-stat-card, .quick-action,
+.sidebar-nav a, .sidebar-nav button, .activity-item,
+.validator-cards .card-item, .profile-card,
+.api-logs-stat-card, .api-history-card tbody tr,
+.footer-social a, .footer-column ul li a,
+.nav-links a, .cta-nav, .btn-primary, .btn-secondary,
+.auth-tab, .auth-submit, .logo, .theme, .back-btn,
+.export-btn, .api-logs-search-btn, .validateBtn,
+.btn-gradient, .delete-btn, .hero-btn,
+.quick-action, .logout-item button {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover pe subtle lift */
+.dash-stat-card:hover,
+.api-stat-card:hover,
+.api-logs-stat-card:hover,
+.validator-cards .card-item:hover,
+.profile-card:hover,
+.dash-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+/* Buttons press effect */
+button:active,
+.btn-primary:active,
+.btn-secondary:active,
+.cta-nav:active,
+.auth-submit:active,
+.validateBtn:active,
+.btn-gradient:active,
+.quick-action:active,
+.hero-btn:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* Smooth focus */
+input:focus,
+select:focus,
+textarea:focus {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Auth modal smooth */
+.auth-overlay {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.auth-modal {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Sidebar smooth */
+.dashboard-sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dashboard page fade-in */
+.dashboard-page.active {
+  animation: dashFadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes dashFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Page content switch */
+[id^="page-"] {
+  animation: pageFade 0.25s ease;
+}
+
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Nav links smooth */
+.nav-links {
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar smooth */
+.dashboard-content,
+.dashboard-sidebar {
+  scroll-behavior: smooth;
+}
